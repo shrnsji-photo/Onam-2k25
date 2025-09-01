@@ -5,8 +5,8 @@ const folder = "image";
 
 // Fetch image dynamically from GitHub
 =======
-const repo = "shrnsji-photo/website_portfolio"; // GitHub username/repo
-const folder = "images";
+const repo = "shrnsji-photo/Onam-2k25"; // GitHub username/repo
+const folder = "image";
 
 // Load images dynamically
 >>>>>>> Stashed changes
