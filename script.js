@@ -1,8 +1,8 @@
 const gallery = document.getElementById('gallery');
 const repo = "shrnsji-photo/Onam-2k25"; // your GitHub repo
-const folder = "images";
+const folder = "image";
 
-// Fetch images dynamically from GitHub
+// Fetch image dynamically from GitHub
 fetch(`https://api.github.com/repos/${repo}/contents/${folder}`)
 .then(res => res.json())
 .then(data => {
