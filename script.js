@@ -1,5 +1,5 @@
 const gallery = document.getElementById('gallery');
-const repo = "shrnsji-photo/website_portfolio"; // your GitHub repo
+const repo = "shrnsji-photo/Onam-2k25"; // your GitHub repo
 const folder = "images";
 
 // Fetch images dynamically from GitHub
