@@ -1,8 +1,4 @@
 const gallery = document.getElementById('gallery');
-<<<<<<< Updated upstream
-const repo = "Onam-2k25"; // your GitHub repo
-const folder = "image";
-
 // Fetch image dynamically from GitHub
 =======
 const repo = "shrnsji-photo/Onam-2k25"; // GitHub username/repo
