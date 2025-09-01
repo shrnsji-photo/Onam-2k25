@@ -1,8 +1,15 @@
 const gallery = document.getElementById('gallery');
+<<<<<<< Updated upstream
 const repo = "shrnsji-photo/Onam-2k25"; // your GitHub repo
 const folder = "image";
 
 // Fetch image dynamically from GitHub
+=======
+const repo = "shrnsji-photo/website_portfolio"; // GitHub username/repo
+const folder = "images";
+
+// Load images dynamically
+>>>>>>> Stashed changes
 fetch(`https://api.github.com/repos/${repo}/contents/${folder}`)
 .then(res => res.json())
 .then(data => {
@@ -41,7 +48,45 @@ fetch(`https://api.github.com/repos/${repo}/contents/${folder}`)
     });
 });
 
-// Download all as ZIP
+// Download all images
 document.getElementById('downloadAll').addEventListener('click', () => {
     window.location.href = `https://github.com/${repo}/archive/refs/heads/main.zip`;
+});
+
+// Particles animation
+const canvas = document.getElementById('particleCanvas');
+const ctx = canvas.getContext('2d');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+const particles = [];
+
+for(let i=0;i<60;i++){
+    particles.push({
+        x: Math.random()*canvas.width,
+        y: Math.random()*canvas.height,
+        r: Math.random()*2+1,
+        dx: (Math.random()-0.5)*0.5,
+        dy: (Math.random()-0.5)*0.5,
+        color: `rgba(255,191,74,${Math.random()})`
+    });
+}
+
+function animate(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    particles.forEach(p=>{
+        p.x+=p.dx; p.y+=p.dy;
+        if(p.x<0 || p.x>canvas.width) p.dx*=-1;
+        if(p.y<0 || p.y>canvas.height) p.dy*=-1;
+        ctx.beginPath();
+        ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+        ctx.fillStyle=p.color;
+        ctx.fill();
+    });
+    requestAnimationFrame(animate);
+}
+animate();
+
+window.addEventListener('resize',()=>{
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
 });
