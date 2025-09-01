@@ -1,0 +1,62 @@
+body {margin:0; font-family:'Poppins', sans-serif; background:#fff; color:#111;}
+header {display:flex; justify-content:space-between; align-items:center; padding:20px; border-bottom:1px solid #eee;}
+header h1 {font-size:2rem; font-weight:700;}
+nav a {margin-left:20px; text-decoration:none; color:#111; font-weight:500; transition:0.3s;}
+nav a:hover {color:#bfa14a;}
+.hero {text-align:center; padding:50px 20px;}
+.hero-text h2 {font-size:2.5rem; margin-bottom:15px;}
+.hero-text p {font-size:1.2rem; color:#555;}
+
+.gallery-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
+  gap:20px;
+  padding:20px;
+}
+.photo-frame {
+  background:#fff;
+  border-radius:12px;
+  box-shadow:0 4px 20px rgba(0,0,0,0.05);
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  transition:0.3s;
+}
+.photo-frame img {
+  width:100%;
+  display:block;
+  height:auto;
+}
+.actions {
+  display:flex;
+  justify-content:space-around;
+  padding:10px;
+  background:#f9f9f9;
+}
+.actions button {
+  padding:8px 12px;
+  border:none;
+  background:#bfa14a;
+  color:#fff;
+  border-radius:6px;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.3s;
+}
+.actions button:hover {
+  background:#a68a36;
+}
+
+.btn {
+  padding:12px 25px;
+  background:#bfa14a;
+  color:#fff;
+  border:none;
+  border-radius:8px;
+  font-weight:600;
+  text-decoration:none;
+  transition:0.3s;
+}
+.btn:hover {background:#a68a36;}
+footer {text-align:center; padding:20px; font-size:0.9rem; color:#666;}
