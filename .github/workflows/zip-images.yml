@@ -3,7 +3,7 @@ name: Zip Images
 on:
   push:
     paths:
-      - 'images/**'  # Trigger only when images folder changes
+      - 'image/**'  # Trigger only when images folder changes
 
 jobs:
   zip:
