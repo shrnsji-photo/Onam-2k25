@@ -17,7 +17,7 @@ jobs:
 
     - name: Zip images
       run: |
-        zip -r gallery.zip images
+        zip -r gallery.zip image
 
     - name: Commit and Push ZIP
       run: |
